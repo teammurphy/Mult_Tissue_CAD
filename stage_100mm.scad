@@ -1,4 +1,4 @@
-// Multi_Tissue_Recording Stage v1
+// Multi_Tissue_Recording Stage v2_100mm
 // Jack F. Murphy <me@jackmurphy.nyc>
 // https://github.com/teammurphy/Multi_Tissue_CAD
 
@@ -6,8 +6,8 @@
 $fn = 30;
 
 // Stage Dimensions
-stage_len=210;
-stage_width=155;
+stage_len=140;
+stage_width=125;
 stage_thickness=10;
 
 // Hole Dimensions
@@ -22,44 +22,45 @@ difference(){
   translate([0, 0, 0])  
     cube([stage_len, stage_width, stage_thickness], center=true);
     
-  translate([0, -4, 5]) 
-    cube([stage_len-4, stage_width-45, stage_thickness], center=true);
+  // Create lower level
+  translate([0, 0, 5]) 
+    cube([stage_len, 90, stage_thickness], center=true);
   
-  translate([0, 6, 5])
-    cylinder(d=130, h=stage_thickness, center=true);  
+  translate([0, 0, 5])
+    cylinder(d=110, h=stage_thickness, center=true);
+    
   // Circular Gap
   translate([0, 0, 0])
     cylinder(d=hole_diam, h=stage_thickness, center=true);
 
   // Rectangular Gap
-  cube([hole_width, hole_len, stage_thickness], center=true);
+  translate([0, 0, 0])  
+    cube([hole_width, hole_len, stage_thickness], center=true);
 
   // Threaded Hole
-  translate([-10, -65, 0]){
+  translate([-40, 54, 0]){
     cylinder(d=threaded, h=stage_thickness, center=true);
     pilot_holes(8.5);
   }
 
   // Linear Bearing Holes
-  translate([-85, 60, 0]) {
+  translate([-60, -54, 0]) {
     cylinder(d=lin_bearing, h=stage_thickness, center=true);
     pilot_holes(12);
+    translate([0, 12, 0])
+        cylinder(d=pilot_rad, h=stage_thickness, center=true);
   }
-  translate([85, 60, 0]) {
+  translate([35, 54, 0]) {
     cylinder(d=lin_bearing, h=stage_thickness, center=true);
     pilot_holes(12);
   }
 
 }
 
-// Create 4 pilot holes evenly spaced around the hole.
+// Create 2
 module pilot_holes(radius){
   translate([radius, 0, 0])
     cylinder(d=pilot_rad, h=stage_thickness, center=true);
   translate([-1*radius, 0, 0])
-    cylinder(d=pilot_rad, h=stage_thickness, center=true);
-  translate([0, radius, 0])
-    cylinder(d=pilot_rad, h=stage_thickness, center=true);
-  translate([0, -1*radius, 0])
     cylinder(d=pilot_rad, h=stage_thickness, center=true);
 }

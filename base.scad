@@ -24,7 +24,7 @@ difference() {
   translate([-85, 60, 3])
     cylinder(d=rod, h=stage_thickness, center=true);
     
-  translate([-10, -65, 3]){
+  translate([-20, -59, 3]){
     cube([43, 43, stage_thickness], center=true);
   }
 }

@@ -34,22 +34,20 @@ difference(){
   // Rectangular Gap
   cube([hole_width, hole_len, stage_thickness], center=true);
 
-  // Threaded Hole
-  translate([-10, -65, 0]){
-    cylinder(d=threaded, h=stage_thickness, center=true);
-    pilot_holes(8.5);
-  }
 
-  // Linear Bearing Holes
-  translate([-85, 60, 0]) {
-    cylinder(d=lin_bearing, h=stage_thickness, center=true);
-    pilot_holes(12);
-  }
   translate([85, 60, 0]) {
     cylinder(d=lin_bearing, h=stage_thickness, center=true);
     pilot_holes(12);
   }
+  // Cut out left side
+  translate([-stage_len/4, 0, 0])
+    cube([stage_len/2, stage_width, stage_thickness], center=true); 
+}
 
+difference(){
+    translate([0, 0, -stage_thickness/2])
+        cube([10, stage_width, 2*stage_thickness], center=true);
+     cube([hole_width, hole_len, 3*stage_thickness], center=true);
 }
 
 // Create 4 pilot holes evenly spaced around the hole.
