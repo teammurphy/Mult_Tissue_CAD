@@ -14,7 +14,7 @@ color("blue") translate([70, -95, 5]) cube([25, 85, 60]);
 color("black") translate([-10, -65, 20]) cube([40, 40, 40], center=true);
 
 // 100mm Petri Dish
-#color("orange") translate([0, 25, 95]) cylinder(d=100, h=20, center=true);
+#color("orange") translate([0, 25, $t*10+95]) cylinder(d=100, h=20, center=true);
 
 // 6 well dish
 *#color("orange") translate([0, 0, $t*10+95]) cube([130, 85, 25], center=true);
