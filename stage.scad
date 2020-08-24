@@ -7,7 +7,7 @@ $fn = 30;
 
 // Stage Dimensions
 stage_len=210;
-stage_width=170;
+stage_width=155;
 stage_thickness=10;
 
 // Hole Dimensions
@@ -16,12 +16,13 @@ hole_len=85;
 hole_width=35;
 lin_bearing=15;
 threaded=10;
-pilot_rad=1;
+pilot_rad=2;
 
 difference(){
-  translate([0, -10, 0])  
+  translate([0, 0, 0])  
     cube([stage_len, stage_width, stage_thickness], center=true);
 
+  
   // Circular Gap
   translate([0, 0, 0])
     cylinder(d=hole_diam, h=stage_thickness, center=true);
