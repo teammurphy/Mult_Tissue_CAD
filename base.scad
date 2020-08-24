@@ -7,7 +7,7 @@ $fn = 30;
 
 // Stage Dimensions
 stage_len=210;
-stage_width=160;
+stage_width=170;
 stage_thickness=10;
 
 // Hole Dimensions
@@ -15,7 +15,8 @@ rod=8;
 
 
 difference() {
-  cube([stage_len, stage_width, stage_thickness], center=true);
+  translate([0, -10, 0])  
+    cube([stage_len, stage_width, stage_thickness], center=true);
 
   // Rod Holes
   translate([85, 60, -3])
@@ -25,5 +26,10 @@ difference() {
 }
 
 // Creates Insert for Pi to Stand Against
-translate([60, -80, 5])
+translate([60, -95, 5])
   cube([10, 110, 60]);
+
+module beans() {
+    cube([100, 100, 100], center=true);
+}
+    

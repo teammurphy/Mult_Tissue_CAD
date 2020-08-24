@@ -1,4 +1,4 @@
-// Multi_Tissue_Recording Base v1
+// Multi_Tissue_Recording Stage v1
 // Jack F. Murphy <me@jackmurphy.nyc>
 // https://github.com/teammurphy/Multi_Tissue_CAD
 
@@ -7,7 +7,7 @@ $fn = 30;
 
 // Stage Dimensions
 stage_len=210;
-stage_width=160;
+stage_width=170;
 stage_thickness=10;
 
 // Hole Dimensions
@@ -19,7 +19,8 @@ threaded=10;
 pilot_rad=1;
 
 difference(){
-  cube([stage_len, stage_width, stage_thickness], center=true);
+  translate([0, -10, 0])  
+    cube([stage_len, stage_width, stage_thickness], center=true);
 
   // Circular Gap
   translate([0, 25, 0])
