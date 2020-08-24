@@ -23,7 +23,7 @@ difference(){
     cube([stage_len, stage_width, stage_thickness], center=true);
 
   // Circular Gap
-  translate([0, 25, 0])
+  translate([0, 0, 0])
     cylinder(d=hole_diam, h=stage_thickness, center=true);
 
   // Rectangular Gap
