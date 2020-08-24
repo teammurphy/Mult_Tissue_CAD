@@ -13,7 +13,7 @@ stage_thickness=10;
 // Hole Dimensions
 hole_diam=50;
 hole_len=85;
-hole_width=30;
+hole_width=35;
 lin_bearing=15;
 threaded=10;
 pilot_rad=1;
