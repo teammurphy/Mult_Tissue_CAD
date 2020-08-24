@@ -29,7 +29,4 @@ difference() {
 translate([60, -95, 5])
   cube([10, 110, 60]);
 
-module beans() {
-    cube([100, 100, 100], center=true);
-}
     
