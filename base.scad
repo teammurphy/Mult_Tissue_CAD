@@ -19,10 +19,14 @@ difference() {
     cube([stage_len, stage_width, stage_thickness], center=true);
 
   // Rod Holes
-  translate([85, 60, -3])
-    cylinder(d=rod, h=stage_thickness);
-  translate([-85, 60, -3])
-    cylinder(d=rod, h=stage_thickness);
+  translate([85, 60, 3])
+    cylinder(d=rod, h=stage_thickness, center=true);
+  translate([-85, 60, 3])
+    cylinder(d=rod, h=stage_thickness, center=true);
+    
+  translate([-10, -65, 3]){
+    cube([43, 43, stage_thickness], center=true);
+  }
 }
 
 // Creates Insert for Pi to Stand Against

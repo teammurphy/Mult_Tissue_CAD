@@ -21,8 +21,12 @@ pilot_rad=2;
 difference(){
   translate([0, 0, 0])  
     cube([stage_len, stage_width, stage_thickness], center=true);
-
+    
+  translate([0, -4, 5]) 
+    cube([stage_len-4, stage_width-45, stage_thickness], center=true);
   
+  translate([0, 6, 5])
+    cylinder(d=130, h=stage_thickness, center=true);  
   // Circular Gap
   translate([0, 0, 0])
     cylinder(d=hole_diam, h=stage_thickness, center=true);
