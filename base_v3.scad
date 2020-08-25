@@ -1,4 +1,4 @@
-// Multi_Tissue_Recording Base v3mm
+// Multi_Tissue_Recording Base v3
 // Jack F. Murphy <me@jackmurphy.nyc>
 // https://github.com/teammurphy/Multi_Tissue_CAD
 

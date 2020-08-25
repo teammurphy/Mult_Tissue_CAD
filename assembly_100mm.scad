@@ -1,11 +1,11 @@
 
-translate([0, 0, $t*10+80]) import("stl/stage_100mm.stl");
+translate([0, 0, $t*10+80]) import("stl/stage_v3.stl");
 *translate([0, 0, 100]) import("stl/stage_100mm.stl");
-import("stl/base_100mm.stl");
+import("stl/base_v3.stl");
 
 
 // Altoids Tin | Motor Controller
-color("red") translate([42.5, 35-(125/2), 5]) cube([45, 95, 60]);
+color("red") translate([40, 35-(125/2), 5]) cube([45, 95, 60]);
 
 // Raspberry Pi
 color("blue") translate([-15, 4-(125/2), 5]) cube([90, 25, 60]);
