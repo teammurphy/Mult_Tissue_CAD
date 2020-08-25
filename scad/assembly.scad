@@ -1,7 +1,7 @@
 
-translate([0, 0, $t*10+80]) import("stl/stage_v3.stl");
-*translate([0, 0, 100]) import("stl/stage_100mm.stl");
-import("stl/base_v3.stl");
+translate([0, 0, $t*10+80]) import("../stl/stage.stl");
+*translate([0, 0, 100]) import("../stl/stage.stl");
+import("../stl/base.stl");
 
 
 // Altoids Tin | Motor Controller
