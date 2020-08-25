@@ -1,4 +1,4 @@
-// Multi_Tissue_Recording Stage v3
+// Multi_Tissue_Recording Stage v0.3
 // Jack F. Murphy <me@jackmurphy.nyc>
 // https://github.com/teammurphy/Multi_Tissue_CAD
 
