@@ -1,6 +1,6 @@
 
 translate([0, 0, $t*10+80]) import("../stl/stage.stl");
-*translate([0, 0, 100]) import("../stl/stage.stl");
+*translate([0, 0, 100]) import("../stl/cap.stl");
 import("../stl/base.stl");
 
 
